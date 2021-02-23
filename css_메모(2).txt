@@ -1,0 +1,77 @@
+2021-01-20
+1. 선택자 종류
+// 태그 선택자
+p {
+    text-align :cneter
+    color : red;
+}
+
+// 클래스 선택자
+.center {
+    text-align :cneter
+    color : red;
+}
+
+// 아이디 선택자
+#center {
+    text-align :cneter
+    color : red;
+}
+
+// 태그와 함께 쓰는 선택자 (p태그에 class Center를 찾는다.) (주로 태그와 함께쓰는게 바람직)
+p.center {
+    text-align :cneter
+    color : red;
+}
+
+// 그룹(연결) 선택자 (그룹의 모든요소에 적용한다.)
+h1,p {
+    text-align :cneter
+    color : red;
+}
+
+// 하위 선택자 (p태그의 하위요소중 span을 찾는다.)
+p span {
+    text-align :cneter
+    color : red;
+}
+
+2. 선택자 우선순위는 태그 => 클래스 => 아이디 => 인라인 이다.
+스타일에 !important을 줄경우 가장 최우선순위가 되어 적용된다.
+
+3. font-weight 는 bold속성을 줄수도있지만 normal값을 넣으면 bold를 뺄수도 있다.
+
+4. 글자 간격 조정은 letter-spacing (px단위)
+   문단 간격 조정은 line-height (em단위 보통 1.5정도)
+   으로 조정한다.
+
+5. 구글폰트에서 글자폰트 적용시 원하는 스타일 선택후 링크복사 (style태그위 권장 스타일 태그내용이 길어지면서 밑으로 내려가기때문)
+   적용하고자하는 태그에 font-family 복사하여 적용 
+   (첫 적용후 다음 적용시 링크에 2개이상의 스타일이 합쳐진 주소로 나옴 이때 새로운 스타일의 링크만 나올수있게 기존 링크는제외한후 적용 
+   추후 관리가 어려워지기 때문)
+
+6. 스타일 text-shadow 속성은 그림자를 여러개줄수있다. 
+     (x축,y축,그림자퍼짐정도,색상 순서)
+ ex) text-shadow: 5px 5px 0 darkblue, 
+     10px 10px 0 dodgerblue; 
+  
+7. ul - li 를 사용할경우 기본 적으로 목록을 구분하는 그림(disc)이 들어가는데
+   list-style: none을 주어 제거가 가능하다.
+
+   ul - li 를 사용할경우 왼쪽 공백이 생기는데 padding-left 값을 주어 조정할수있다.
+
+   기본적으로 세로로 정렬이되는데 float : left를 줄경우 가로로 정렬을 줄수있다.
+
+8. list-style-image 로 이미지경로를 url() 로설정하여 목록이미지를 설정할수있다.
+
+9. font-awsome으로 가져오는 아이콘들은 텍스트로 판단되기때문에 크기를 변화시켜도 깨지지않는다.
+   이미지로했을때의 불편함을 감소시킬수있음
+
+10. background-color 의 rgba는 색조정 + 투명도조절이 가능하다.
+    ex) rgba(255,255,255,0.5) < 마지막 0.5부분이 투명도조절부분
+
+11. background-image로 이미지를 넣을경우 이미지가 반복되어 화면을 채우는데
+    background-repeat: no-repeat 로 이미지가 반복되어 화면을채우는것을 바꿀수있다.
+
+12. 배경이미지는 background-position : center center 이런식으로 
+    해당태그 구역에서 위치조정이 가능하다.
